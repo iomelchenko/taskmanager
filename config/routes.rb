@@ -1,4 +1,8 @@
 Taskmanager::Application.routes.draw do
+  get "tasks/task"
+
+  get "progects/progect"
+
   # The priority is based upon order of creation:
   # first created -> highest priority.
 
