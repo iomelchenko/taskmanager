@@ -1,5 +1,5 @@
 require 'spec_helper'
 
-describe "progects/progect.html.erb" do
+describe Progect do
   pending "add some examples to (or delete) #{__FILE__}"
 end

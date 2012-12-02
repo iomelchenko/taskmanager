@@ -1,0 +1,23 @@
+<h1>Listing progects</h1>
+
+<table>
+  <tr>
+    <th>Name</th>
+    <th></th>
+    <th></th>
+    <th></th>
+  </tr>
+
+<% @progects.each do |progect| %>
+  <tr>
+    <td><%= progect.name %></td>
+    <td><%= link_to 'Show', progect %></td>
+    <td><%= link_to 'Edit', edit_progect_path(progect) %></td>
+    <td><%= link_to 'Destroy', progect, :method => :delete, :data => { :confirm => 'Are you sure?' } %></td>
+  </tr>
+<% end %>
+</table>
+
+<br />
+
+<%= link_to 'New Progect', new_progect_path %>
