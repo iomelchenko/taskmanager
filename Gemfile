@@ -6,7 +6,7 @@ gem 'rake', '10.0.2'
 # Bundle edge Rails instead:
 # gem 'rails', :git => 'git://github.com/rails/rails.git'
 
-gem 'sqlite3'
+
 
 gem 'json'
 gem 'dynamic_form'
@@ -26,6 +26,7 @@ end
 group :development do
   gem 'annotate'
   gem 'rspec-rails'
+  gem 'sqlite3'
 end
 
 gem 'jquery-rails'
@@ -33,6 +34,10 @@ gem 'jquery-rails'
 group :test do
   gem 'rspec-rails'
   gem 'webrat'
+end
+
+group :production do
+  gem 'pg'
 end
 # To use ActiveModel has_secure_password
 # gem 'bcrypt-ruby', '~> 3.0.0'
