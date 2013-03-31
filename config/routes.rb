@@ -1,4 +1,20 @@
 Taskmanager::Application.routes.draw do
+  resources :progects do
+    resources :tasks
+  end
+
+  get "tasks/task"
+
+  #get "progects/new"
+  #post "progects/create"
+  #get "progects/:id" => "progects#show", :as => :progect
+  #get "progects" => "progects#index"
+  #get "progects/:id/edit" => "progects#edit"
+  #put "progects/:id" => "progects#update"
+  #delete "progects/:id" => "posts#destroy"
+  
+  
+  
   # The priority is based upon order of creation:
   # first created -> highest priority.
 

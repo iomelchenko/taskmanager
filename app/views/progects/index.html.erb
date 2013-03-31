@@ -1,0 +1,35 @@
+<h1>Simple TODO List</h1>
+
+<table class="table table-striped table-bordered table-condensed">
+  <tr>
+    <th></th>
+    <th>Name</th>
+    <th></th>
+    <th></th>
+    <th></th>
+    <th></th>
+    <th></th>
+  </tr>
+
+<% @progects.each do |progect| %>
+  <tr>
+    <th><i class="icon-plus"></i></th>
+    <td><%= progect.name %></td>
+    <td><%= link_to 'Edit', edit_progect_path(progect) %></td>
+    <td><%= link_to 'Destroy', progect, :method => :delete, :data => { :confirm => 'Are you sure?' } %></td>
+  </tr>
+    
+  <%= progect.tasks.each do |t| %>
+    <tr>
+      <td> </td>
+      <td><%= t.name %> </td>
+    
+    </tr>
+  <% end%>
+
+<% end %>
+</table>
+
+<br />
+
+<%= link_to 'New Progect', new_progect_path %>
