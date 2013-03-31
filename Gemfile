@@ -2,8 +2,7 @@ source 'https://rubygems.org'
 
 gem 'rails', '3.2.8'
 gem 'rake', '10.0.2'
-gem 'pg'
-gem 'sqlite3'
+
 
 # Bundle edge Rails instead:
 # gem 'rails', :git => 'git://github.com/rails/rails.git'
@@ -28,6 +27,7 @@ end
 group :development do
   gem 'annotate'
   gem 'rspec-rails'
+  gem 'sqlite3'
 
 end
 
@@ -39,9 +39,9 @@ group :test do
   gem 'sqlite3'
 end
 
-#group :production do
-#  gem 'pg'
-#end
+group :production do
+  gem 'pg'
+end
 # To use ActiveModel has_secure_password
 # gem 'bcrypt-ruby', '~> 3.0.0'
 
