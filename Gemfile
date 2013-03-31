@@ -27,7 +27,7 @@ end
 group :development do
   gem 'annotate'
   gem 'rspec-rails'
-  gem 'sqlite3'
+gem 'sqlite3', :group => [:development, :test]
 
 end
 
@@ -36,10 +36,11 @@ gem 'jquery-rails'
 group :test do
   gem 'rspec-rails'
   gem 'webrat'
-  gem 'sqlite3'
+
 end
 
 group :production do
+  gem 'thin'
   gem 'pg'
 end
 # To use ActiveModel has_secure_password
