@@ -2,6 +2,7 @@ source 'https://rubygems.org'
 
 gem 'rails'
 gem 'rake', '10.0.2'
+gem 'pry'
 
 
 # Bundle edge Rails instead:

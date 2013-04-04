@@ -4,29 +4,22 @@
   <tr>
     <th></th>
     <th>Name</th>
-    <th></th>
-    <th></th>
-    <th></th>
-    <th></th>
-    <th></th>
+
   </tr>
 
 <% @progects.each do |progect| %>
   <tr>
     <th><i class="icon-plus"></i></th>
     <td><%= progect.name %></td>
+
+        <% progect.tasks.each do |t| %>
+             <%= render partial: 'task', locals: { t: t } %>
+         <% end %>
+
+
     <td><%= link_to 'Edit', edit_progect_path(progect) %></td>
     <td><%= link_to 'Destroy', progect, :method => :delete, :data => { :confirm => 'Are you sure?' } %></td>
   </tr>
-    
-  <%= progect.tasks.each do |t| %>
-    <tr>
-      <td> </td>
-      <td><%= t.name %> </td>
-    
-    </tr>
-  <% end%>
-
 <% end %>
 </table>
 

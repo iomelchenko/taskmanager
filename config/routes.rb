@@ -1,9 +1,11 @@
 Taskmanager::Application.routes.draw do
+  
+  root :to => 'progects#index'
   resources :progects do
     resources :tasks
   end
 
-  get "tasks/task"
+  #get "tasks/task"
 
   #get "progects/new"
   #post "progects/create"
