@@ -28,20 +28,12 @@
 
       </tr>
 
-      <% end %>
             <% progect.tasks.each do |t| %>
-               <tr>
-                <td></td>
-                <td></td>                
-                <td><%= "-- Task № #{t.id}: #{t.name}" %></td>
-                <td><%= t.status %></td>
-                <td></td> 
-                <td></td> 
-                <td></td>                                                 
-                <td></td>                  
-              </tr>  
+     
+                 <%= render partial: 'task', locals: { t: t } %>
 
              <% end %>
+      <% end %>
     <% end %>
 
 </table>
