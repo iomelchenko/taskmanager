@@ -1,7 +1,12 @@
 class ProgectsController < ApplicationController
+  
+  before_filter :authenticate_user!
+
   # GET /progects
   # GET /progects.json
   def index
+    #binding.pry
+    #@progects = Progect.find_by_user_id(current_user.id)
     @progects = Progect.all
 
     respond_to do |format|
@@ -41,6 +46,7 @@ class ProgectsController < ApplicationController
   # POST /progects.json
   def create
     @progect = Progect.new(params[:progect])
+    @progect.user_id = current_user.id
 
     respond_to do |format|
       if @progect.save

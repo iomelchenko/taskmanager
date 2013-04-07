@@ -1,5 +1,7 @@
 Taskmanager::Application.routes.draw do
   
+  devise_for :users
+
   root :to => 'progects#index'
   resources :progects do
     resources :tasks

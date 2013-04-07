@@ -3,6 +3,7 @@ source 'https://rubygems.org'
 gem 'rails'
 gem 'rake', '10.0.2'
 gem 'pry'
+gem 'devise'
 
 
 # Bundle edge Rails instead:
